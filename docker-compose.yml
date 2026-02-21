@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  fastapi:
+    build: ./fastapi
+    ports: ["8001:8000"]
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+
+  flask:
+    build: ./flask
+    ports: ["8002:8000"]
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
