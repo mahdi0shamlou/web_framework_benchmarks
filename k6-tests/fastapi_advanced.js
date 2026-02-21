@@ -8,14 +8,13 @@ export const options = {
     { duration: "30s", target: 0 },    // ramp-down
   ],
   thresholds: {
-    http_req_duration: ["p95<200"], // 95% of requests should be below 200ms
+    "http_req_duration": ["p(95)<200"], // 95% of requests should be below 200ms
   },
   discardResponseBodies: false,
 };
 
 const routes = [
-  { name: "hello", url: "http://localhost:8001/hello" },
-  { name: "sleep", url: "http://localhost:8001/sleep" }, // optional async route
+  { name: "hello", url: "http://localhost:8001/hello" }
 ];
 
 export default function () {

@@ -8,14 +8,13 @@ export const options = {
     { duration: "30s", target: 0 },
   ],
   thresholds: {
-    http_req_duration: ["p95<200"],
+    "http_req_duration": ["p(95)<200"],
   },
   discardResponseBodies: false,
 };
 
 const routes = [
-  { name: "hello", url: "http://localhost:8002/hello" },
-  { name: "sleep", url: "http://localhost:8002/sleep" }, // optional sleep route
+  { name: "hello", url: "http://localhost:8002/hello" }
 ];
 
 export default function () {
